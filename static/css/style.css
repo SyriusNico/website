@@ -55,15 +55,6 @@ body {
 	animation: none;
 }
 
-.enter-btn{
-	display: flex;
-	justify-content: center;
-}
-
-.enter-btn img{
-	width: 100px;
-}
-
 @keyframes blink{
 	0% { background-color: #ccc; }
 	49% { background-color: #ccc; }
@@ -72,3 +63,41 @@ body {
 	100% { background-color: #ccc; }
 }
 
+button{
+	font: 3rem 'Montserrat';
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	margin: 30px;
+	height: 100px;
+	width: 300px;
+	position: relative;
+	color: #ccc;
+	cursor: pointer;
+	background-color: #f16a1d;
+	border: none;
+	box-shadow: 1px 1px #913A08,
+				2px 2px #913A08,
+				3px 3px #913A08,
+				4px 4px #913A08,
+				5px 5px #913A08,
+				6px 6px #913A08,
+				7px 7px #913A08,
+				8px 8px #913A08,
+				9px 9px #913A08,
+				10px 10px #913A08,
+				11px 11px #913A08,
+				12px 12px #913A08,
+				13px 13px #913A08,
+				14px 14px #913A08,
+				15px 15px #913A08;
+}
+
+button:active{
+	border: none;
+	box-shadow: 1px 1px #913A08,
+				2px 2px #913A08;
+
+	top: 14px;
+	left: 14px;
+	position: relative;
+}

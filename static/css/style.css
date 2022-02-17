@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 *{
 	margin: 0;
@@ -42,7 +43,9 @@ nav{
 }
 
 nav h1{
-	font-size: 25px;
+	font-size: 30px;
+	font-family: 'Lobster', sans-serif;
+	font-weight: 100;
 	width: 100%;
 	margin-bottom: 0;
 	cursor: pointer;
@@ -72,7 +75,7 @@ header{
 }
 
 section{
-	height: 90vh;
+	height: 100vh;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -93,7 +96,7 @@ button{
 }
 
 footer{
-	top: 275%;
+	top: 400%;
 	position: absolute;
 	width: 100%;
 	justify-items: center;
@@ -111,23 +114,86 @@ footer ul li{
 	width: 100%;
 }
 
+
+.word{
+	margin-left: 50px;
+	margin-top: 300px;
+	opacity: 0;
+}
+
+.word.visible{
+	opacity: 1;
+	transition-duration: 3s;
+	transition-delay: 2s;
+}
+
+.picture.opacity{
+	opacity: 1;
+	filter: grayscale(0%);
+	transition-duration: 4s;
+}
+
+#bg-one{
+	top: 8.2%;
+	left: 25%;
+	position: absolute;
+}
+
+#bg-two{
+	top: 5%;
+	left: 55%;
+	position: absolute;
+}
+
+.animated-text{
+	display: inline-flex;
+	top: 35%;
+	height: 10%;
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+}
+
+.animated-picture{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	top: 35%;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.animated-picture img{
+	border-radius: 10px;
+	width: 20%;
+	filter: grayscale(100%);
+	opacity: 0;
+}
+
+.animated-picture img:hover{
+	filter: grayscale(0%);
+	transition-duration: 1s;
+}
+
 .preface{
-	top: 25%;
+	top: 120%;
 	position: absolute;
 }
 
 .bio{
-	top: 100%;
+	top: 200%;
 	position: absolute;
 }
 
 .project-description{
-	top: 175%;
+	top: 275%;
 	position: absolute;
 }
 
 
 .content-text{
+	opacity: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -139,19 +205,66 @@ footer ul li{
 .content-picture{
 	border-radius: 10px;
 	width: 30%;
-	opacity: 1;
 }
 
-.to-left.active{
-	opacity: 0;
-	transform: translateX(-50%);
-	transition-property: transform, opacity;
-	transition-duration: 3s;
+.content-text.left{
+	animation: left;
+	animation-duration: 1s;
 }
 
-.to-right.active{
-	opacity: 0;
-	transform: translateX(50%);
-	transition-property: transform, opacity;
-	transition-duration: 3s;
+
+.content-text.right{
+	animation: right;
+	animation-duration: 1s;
 }
+
+.content-picture.left{
+	animation: left;
+	animation-duration: 1s;
+}
+
+.content-picture.right{
+	animation: right;
+	animation-duration: 1s;
+}
+
+
+@keyframes right{
+	from {
+		opacity: 0;
+		margin-right: 100px;
+		transition-property: transform, opacity;
+	}
+	to {
+		opacity: 1;
+		margin-right: 0;
+		transition-property: opacity, transform;
+		transition-duration: 3s;
+	}
+}
+
+@keyframes left{
+	from {
+		opacity: 0;
+		margin-left: 100px;
+		transition-property: transform, opacity;
+	}
+	to {
+		opacity: 1;
+		margin-left: 0;
+		transition-property: opacity, transform;
+		transition-duration: 3s;
+	}
+}
+
+/*@keyframes move-right {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}*/

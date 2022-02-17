@@ -16,30 +16,50 @@
 			<li>contact</li>
 		</ul>
 	</nav>
+	<br>
+	<div class="animated-text">
+		<h1 class="word" id="create">Créer</h1>
+		<h1 class="word" id="forged">Forger</h1>
+		<h1 class="word" id="work">Travailler</h1>
+		<h1 class="word" id="design">Concevoir</h1>
+		<h1 class="word" id="imagine">Imaginer</h1>
+	</div>
+	<div class="animated-picture">
+		<img class="picture" src="{% static 'img/argile.jpeg' %}">
+		<img class="picture" id="bg-one"src="{% static 'img/metal.jpeg' %}">
+		<img class="picture" src="{% static 'img/bois.jpeg' %}">
+		<img class="picture" id="bg-two" src="{% static 'img/pain.jpeg' %}">
+		<img class="picture" src="{% static 'img/draw.jpeg' %}">
+	</div>
+	<br>
 	<header class="preface">
-		<div class="content-text to-left">
+		<div id="preface" class="content-text right">
 			<h1>Le voyage commence</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<button>Voir plus</button>
 		</div>
-		<img class="content-picture to-right" src="{% static 'img/1.jpeg' %}">
+		<img id="pic-preface" class="content-picture left" src="{% static 'img/1.jpeg' %}">
 	</header>
+	<br>
 	<section class="bio">
-		<img class="content-picture to-left" src="{% static 'img/2.jpeg' %}">
-		<div class="content-text to-right">
+		<img id="pic-bio" class="content-picture right" src="{% static 'img/2.jpeg' %}">
+		<div id="bio" class="content-text left">
 			<h1>Bio</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut liquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<button>Voir plus</button>
 		</div>
 	</section>
+	<br>
+	<br>
 	<section class="project-description">
-		<div class="content-text to-left">
+		<div id="project" class="content-text right">
 			<h1>Réalisations</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<button>Voir plus</button>
 		</div>
-		<img class="content-picture to-right" src="{% static 'img/3.jpeg' %}">
+		<img id="example" class="content-picture left" src="{% static 'img/3.jpeg' %}">
 	</section>
+	<br>
 	<footer>
 		<ul>
 			<li><a href="">LinkedIn</a></li>
@@ -47,5 +67,6 @@
 			<li><a href="">Twitter</a></li>
 		</ul>
 	</footer>
+	<script type="text/javascript" src="{% static 'js/pictures.js' %}"></script>
 </body>
 </html>
